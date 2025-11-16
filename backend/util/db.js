@@ -3,7 +3,7 @@ const pool = mysql2.createPool({
     host:'localhost',
     user:'root',
     password:'manager',
-    database:'onlinefoodordering_db'
+    database:'hybrid'
 })
 
 module.exports = pool
