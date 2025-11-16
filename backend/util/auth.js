@@ -1,9 +1,12 @@
 const jwt = require('jsonwebtoken')
+const result = require('./result')
+const config = require('./config')
 
 function authorizeUser(req, res, next) {
     const url = req.url
-    if (url == '/user/signin' || url == '/user/signup')
+    if (url == '/auth/signin' || url == '/auth/signup'){
         next()
+    }
     else if (url == '/food' && req.method == 'GET')
         next()
     else {
